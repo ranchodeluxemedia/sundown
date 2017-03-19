@@ -32,6 +32,14 @@ a {
   }
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 // Lists, bitches... Remove the bullets for unordered lists because we'll rarely use 'em...
 ul,
 ol,
