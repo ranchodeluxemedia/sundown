@@ -76,6 +76,7 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'bones-event-thumb', 300, 300, true );
+add_image_size( 'bones-event-full', 1920, 650, true );
 
 /*
 to add more sizes, simply copy a line from above
