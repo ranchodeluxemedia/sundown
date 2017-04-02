@@ -28,7 +28,7 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/assets/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'assets/custom-post-type.php' );
+  //require_once( 'assets/custom-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -75,6 +75,7 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'bones-event-thumb', 300, 300, true );
 
 /*
 to add more sizes, simply copy a line from above
@@ -243,5 +244,12 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+// Change name of Featured Image on Event Posts
+add_action('do_meta_boxes', 'replace_featured_image_box');
+function replace_featured_image_box() {
+  remove_meta_box('postimagediv', 'event', 'side' );
+  add_meta_box('postimagediv', __('Artist Flyer or Image'), 'post_thumbnail_meta_box', 'event', 'side', 'low' );
+}
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

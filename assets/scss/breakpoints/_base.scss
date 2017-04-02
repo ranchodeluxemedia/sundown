@@ -219,13 +219,13 @@ HEADER STYLES
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: $site-gold /*url("../images/burger.jpg") center center no-repeat*/;
+		background: url("../images/bar2.jpeg") center center no-repeat;
 		width: 100%;
 		height: 600px;
 		background-size: cover;
 		.slider_widget {
-			max-width: 50%;
-			margin: 0; padding: 1em;
+			max-width: 80%;
+			margin: 2em; padding: 1em;
 			// margin-right: 10em;
 			background: $white;
 			hr {
@@ -245,7 +245,7 @@ HEADER STYLES
 			.special-price {
 				text-align: center;
 				font-weight: 700;
-				font-size: 1.5em;
+				font-size: .8em;
 			}
 		}
 	}
@@ -304,6 +304,13 @@ HEADER STYLES
 		}
 	}
 
+	.page-header {
+		height: 350px;
+		width: 100vw;
+		background: url(http://sundowntavern.dev/wp-content/uploads/2017/03/Screenshot-2017-03-19-03.14.21.png) center center no-repeat;
+		background-size: cover;
+		opacity: 0.6;
+	}
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -1040,4 +1047,55 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {
+		font-family: $brandon;
+		font-size: .5em;
+		a {
+			text-transform: uppercase;
+			letter-spacing: .22em;
+			font-weight: 700;
+		}
+	}
+
+
+.fdm-item-title {
+	border-bottom: 2px dotted $site-silver;
+}
+
+.event-table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+
+	thead th:nth-child(1) {
+		width: 20%;
+	}
+	// thead th:nth-child(3) {
+	// 	width: 20%;
+	// }
+	tr {
+		vertical-align: middle;
+		border-bottom: 1px solid $site-silver;
+		&:last-child {
+			border: none;
+		}
+	}
+	td {
+		//padding: 1.5em;
+	}
+	.event-excerpt {
+		font-size: .85em;
+	}
+}
+
+.event-page-header {
+	margin: 0;
+	text-align: center;
+	padding: 6em 0;
+	background: url('../images/eventPageHeader3.jpg') center center no-repeat;
+	background-size: cover;
+	color: $white;
+	h2 {
+		margin: 0; padding: 0;
+	}
+}
