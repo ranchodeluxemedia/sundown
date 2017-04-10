@@ -54,7 +54,7 @@
               <ul class="list-inline">
                 <li>111 East Park Ave., Ruston, Louisiana</li>
                 <li>(318) 255-8028</li>
-                <li>Mon - Sat:  11:00am - 2:00am | Sun:  11:00am-10:00pm</li>
+                <li>Hours: <?php sundown_store_hours(); ?></li>
               </ul>
             </div>
           </div>

@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Menu Page
+ Template Name: About Us
  *
  * This is your custom page template. You can create as many of these as you need.
  * Simply name is "page-whatever.php" and in add the "Template Name" title at the
@@ -17,7 +17,7 @@
 
 			<div id="content">
 
-			<header class="food-page-header inset-outline-invert">
+			<header class="about-page-header inset-outline-invert">
 				
 			</header>
 
@@ -28,6 +28,12 @@
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+								<header class="article-header">
+
+									<h1 class="page-title"><?php the_title(); ?></h1>
+
+								</header>
 
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php
@@ -62,7 +68,7 @@
 
 								</footer>
 
-								<?php comments_template(); ?>
+								<?php //comments_template(); ?>
 
 							</article>
 

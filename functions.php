@@ -253,4 +253,43 @@ function replace_featured_image_box() {
   add_meta_box('postimagediv', __('Artist Flyer or Image'), 'post_thumbnail_meta_box', 'event', 'side', 'low' );
 }
 
+// if(function_exists('acf_add_options_page')) {
+//   acf_add_options_page(array(
+//     'page_title' => 'Sundown Specials',
+//     'menu_title' => 'Sundown Specials',
+//     'menu-slug' => 'sundown-specials',
+//     'capability' => 'edit_posts',
+//     'redirect' => false
+//   ));
+// }
+
+function sundown_store_hours() {
+
+  $hours = array(
+    'mon' => array('11:00-2:00'),
+    'tue' => array('11:00-2:00'),
+    'wed' => array('11:00-2:00'),
+    'thu' => array('11:00-2:00'),
+    'fri' => array('11:00-2:00'),
+    'sat' => array('11:00-2:00'),
+    'sun' => array('11:00-00:00'),
+  );
+
+  $exceptions = array(
+      // '12/24'  => array('11:00-18:00'),
+      // '10/18' => array('11:00-16:00', '18:00-20:30')
+  );
+
+  $template = array(
+    'open'           => "Yes, we're open! Come on by!",
+    'closed'         => "Sorry, we're closed. We'll be back tomorrow from {%hours%}.",
+    'closed_all_day' => "Sorry, we're closed today.",
+    'separator'      => " - ",
+    'join'           => " and ",
+    'format'         => "g:ia", // options listed here: http://php.net/manual/en/function.date.php
+    'hours'          => "{%open%}{%separator%}{%closed%}"
+  );
+  $store_hours = new StoreHours($hours, $exceptions, $template);
+  $store_hours->render();
+}
 /* DON'T DELETE THIS CLOSING TAG */ ?>

@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Custom Page Example
+ Template Name: Drink Page
  *
  * This is your custom page template. You can create as many of these as you need.
  * Simply name is "page-whatever.php" and in add the "Template Name" title at the
@@ -17,9 +17,13 @@
 
 			<div id="content">
 
+			<header class="drink-page-header inset-outline-invert">
+				
+			</header>
+
 				<div id="inner-content" class="wrap row cf">
 
-						<main id="main" class="col-md-8 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-md-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -28,11 +32,6 @@
 								<header class="article-header">
 
 									<h1 class="page-title"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
 
 								</header>
 
@@ -69,7 +68,7 @@
 
 								</footer>
 
-								<?php comments_template(); ?>
+								<?php //comments_template(); ?>
 
 							</article>
 
@@ -91,7 +90,7 @@
 
 						</main>
 
-						<?php get_sidebar(); ?>
+						<?php //get_sidebar(); ?>
 
 				</div>
 

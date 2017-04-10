@@ -37,6 +37,8 @@ margin:0;
 padding:1em 2em;
 margin-right:10em;
 background:#fff
+}#slider .slider_widget .special-price{font-size:1.2em;
+font-weight:700
 }.nav{margin-top:2em;
 text-align:center
 }.nav li{display:inline-block;
@@ -76,5 +78,9 @@ margin:2.2em 0
 }.widget ul li ul{margin-top:.75em;
 padding-left:1em
 }.copyright{font-size:.85em
+}.fdm-item-content{font-size:.8em;
+font-style:italic
+}.fdm-item-price{font-weight:700
+}.fdm-item-price::before{content:"$"
 }.wrap{width:1040px
 }

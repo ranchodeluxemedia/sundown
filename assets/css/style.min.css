@@ -74,10 +74,10 @@ border-spacing:0
 }.image-replacement,.ir{text-indent:100%;
 white-space:nowrap;
 overflow:hidden
-}.cf,.clearfix,.comment-respond{zoom:1
-}.cf:after,.cf:before,.clearfix:after,.clearfix:before,.comment-respond:after,.comment-respond:before{content:"";
+}.cf,.clearfix,.comment-respond,.event-wrapper,.event-wrapper .event-content,.event-wrapper .event-content .event-cover,.event-wrapper .event-content .event-date,.event-wrapper .event-content .event-title{zoom:1
+}.cf:after,.cf:before,.clearfix:after,.clearfix:before,.comment-respond:after,.comment-respond:before,.event-wrapper .event-content .event-cover:after,.event-wrapper .event-content .event-cover:before,.event-wrapper .event-content .event-date:after,.event-wrapper .event-content .event-date:before,.event-wrapper .event-content .event-title:after,.event-wrapper .event-content .event-title:before,.event-wrapper .event-content:after,.event-wrapper .event-content:before,.event-wrapper:after,.event-wrapper:before{content:"";
 display:table
-}.cf:after,.clearfix:after,.comment-respond:after{clear:both
+}.cf:after,.clearfix:after,.comment-respond:after,.event-wrapper .event-content .event-cover:after,.event-wrapper .event-content .event-date:after,.event-wrapper .event-content .event-title:after,.event-wrapper .event-content:after,.event-wrapper:after{clear:both
 }span.amp{font-family:'Goudy Old Style',Palatino,'Book Antiqua',serif!important;
 font-style:italic;
 font-size:1.2em
@@ -642,6 +642,7 @@ line-height:1.75;
 color:#100d09;
 background-color:#fff;
 -moz-osx-font-smoothing:grayscale
+}#main{padding:3em 0
 }#about-section .about-info,.wrap{width:96%;
 margin:0 auto
 }a,a:visited{color:#cd9a6d
@@ -707,7 +708,7 @@ height:600px;
 background-size:cover
 }#slider .slider_widget{max-width:80%;
 margin:2em;
-padding:1em;
+padding:1.5em;
 background:#fff
 }#slider .slider_widget hr{margin:1em auto;
 width:60%
@@ -756,9 +757,30 @@ transform:translate(-50%,-50%)
 }#about-section{padding-top:10em;
 padding-bottom:8em;
 text-align:center
-}.page-header{height:350px;
+}#about-section p{margin:1em
+}.food-page-header{height:350px;
 width:100vw;
-background:url(http://sundowntavern.dev/wp-content/uploads/2017/03/Screenshot-2017-03-19-03.14.21.png) center center no-repeat;
+background:url(../images/kitchen1.jpeg) top center no-repeat;
+background-size:cover;
+opacity:.6
+}.events-page-header{height:350px;
+width:100vw;
+background:url(../images/eventPageHeader3.jpg) center center no-repeat;
+background-size:cover;
+opacity:.6
+}.about-page-header{height:350px;
+width:100vw;
+background:url(../images/headerBack1-1920.jpg) center center no-repeat;
+background-size:cover;
+opacity:.6
+}.drink-page-header{height:350px;
+width:100vw;
+background:url(../images/well1-800.jpg) center center no-repeat;
+background-size:cover;
+opacity:.6
+}.contact-page-header{height:350px;
+width:100vw;
+background:url(../images/woodBg.jpeg) center center no-repeat;
 background-size:cover;
 opacity:.6
 }.nav{border-bottom:0;
@@ -786,6 +808,9 @@ padding:1.5em
 border-top:1px solid #f8f9fa
 }.hentry footer p{margin:0
 }.entry-title,.page-title,.single-title{margin:0
+}.page-title{text-align:center;
+font-size:1.5em;
+letter-spacing:.22em
 }.byline{color:#9fa6b4;
 font-style:italic;
 margin:0
@@ -947,14 +972,36 @@ font-size:.5em
 letter-spacing:.22em;
 font-weight:700
 }.fdm-item-title{border-bottom:2px dotted #858585
-}.event-table{table-layout:fixed;
+}.event-wrapper{margin:0;
+padding:0;
+position:relative;
 width:100%;
-border-collapse:collapse
-}.event-table thead th:nth-child(1){width:20%
-}.event-table tr{vertical-align:middle;
-border-bottom:1px solid #858585
-}.event-table tr:last-child{border:none
-}.event-table .event-excerpt{font-size:.85em
+border-bottom:1px dotted #858585
+}.event-wrapper .event-content{position:relative;
+line-height:4em
+}.event-wrapper .event-content .event-date{display:block;
+margin:0;
+padding:0;
+width:20%;
+float:left;
+font-family:baskerville-urw,baskerville-urw,Merriweather,Georgia,Cambria,Times New Roman,Times,serif;
+text-transform:uppercase;
+font-size:.85em;
+font-weight:700;
+color:#100d09
+}.event-wrapper .event-content .event-title{display:block;
+margin:0;
+padding:0;
+float:left;
+width:60%;
+font-weight:700
+}.event-wrapper .event-content .event-cover{display:block;
+margin:0;
+padding:0;
+width:20%;
+float:left;
+font-size:.85em;
+font-weight:700
 }.event-page-header{margin:0;
 text-align:center;
 padding:6em 0;
@@ -963,6 +1010,8 @@ background-size:cover;
 color:#fff
 }.event-page-header h2{margin:0;
 padding:0
+}.fdm-section-header h3{text-align:center;
+color:#cd9a6d
 }@media only screen and (min-width:481px){.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;
 display:inline;
 float:left
@@ -991,6 +1040,8 @@ margin:0;
 padding:1em 2em;
 margin-right:10em;
 background:#fff
+}#slider .slider_widget .special-price{font-size:1.2em;
+font-weight:700
 }.nav{margin-top:2em;
 text-align:center
 }.nav li{display:inline-block;
@@ -1030,6 +1081,10 @@ margin:2.2em 0
 }.widget ul li ul{margin-top:.75em;
 padding-left:1em
 }.copyright{font-size:.85em
+}.fdm-item-content{font-size:.8em;
+font-style:italic
+}.fdm-item-price{font-weight:700
+}.fdm-item-price::before{content:"$"
 }
 }@media only screen and (min-width:1030px){#about-section .about-info,.wrap{width:1040px
 }

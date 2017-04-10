@@ -25,6 +25,10 @@ body {
   	-moz-osx-font-smoothing: grayscale;
 }
 
+#main {
+	padding: 3em 0;
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -225,7 +229,7 @@ HEADER STYLES
 		background-size: cover;
 		.slider_widget {
 			max-width: 80%;
-			margin: 2em; padding: 1em;
+			margin: 2em; padding: 1.5em;
 			// margin-right: 10em;
 			background: $white;
 			hr {
@@ -299,15 +303,49 @@ HEADER STYLES
 		padding-top: 10em;
 		padding-bottom: 8em;
 		text-align: center;
+		p {
+			margin: 1em;
+		}
 		.about-info {
 			@extend .wrap;
 		}
 	}
 
-	.page-header {
+	.food-page-header {
 		height: 350px;
 		width: 100vw;
-		background: url(http://sundowntavern.dev/wp-content/uploads/2017/03/Screenshot-2017-03-19-03.14.21.png) center center no-repeat;
+		background: url(../images/kitchen1.jpeg) top center no-repeat;
+		background-size: cover;
+		opacity: 0.6;
+	}
+	.events-page-header {
+		height: 350px;
+		width: 100vw;
+		background: url(../images/eventPageHeader3.jpg) center center no-repeat;
+		background-size: cover;
+		opacity: 0.6;
+	}
+
+	.about-page-header {
+		height: 350px;
+		width: 100vw;
+		background: url(../images/headerBack1-1920.jpg) center center no-repeat;
+		background-size: cover;
+		opacity: 0.6;
+	}
+
+	.drink-page-header {
+		height: 350px;
+		width: 100vw;
+		background: url(../images/well1-800.jpg) center center no-repeat;
+		background-size: cover;
+		opacity: 0.6;
+	}
+
+	.contact-page-header {
+		height: 350px;
+		width: 100vw;
+		background: url(../images/woodBg.jpeg) center center no-repeat;
 		background-size: cover;
 		opacity: 0.6;
 	}
@@ -442,7 +480,11 @@ POSTS & CONTENT STYLES
 
 		.single-title {}
 
-		.page-title {}
+		.page-title {
+			text-align: center;
+			font-size: 1.5em;
+			letter-spacing: .22em;
+		}
 
 		.entry-title {}
 
@@ -1062,29 +1104,48 @@ FOOTER STYLES
 	border-bottom: 2px dotted $site-silver;
 }
 
-.event-table {
-	table-layout: fixed;
+.event-wrapper {
+	margin: 0; padding: 0;
+	@extend .cf;
+	position: relative;
 	width: 100%;
-	border-collapse: collapse;
-
-	thead th:nth-child(1) {
-		width: 20%;
-	}
-	// thead th:nth-child(3) {
-	// 	width: 20%;
-	// }
-	tr {
-		vertical-align: middle;
-		border-bottom: 1px solid $site-silver;
-		&:last-child {
-			border: none;
+	border-bottom: 1px dotted $site-silver;
+	.event-content {
+		position: relative;
+		line-height: 4em;
+		@extend .cf;
+		.event-date {
+			display: block;
+			margin: 0; padding: 0;
+			@extend .cf;
+			width: 20%;
+			float: left;
+			font-family: $heading-font;
+			text-transform: uppercase;
+			font-size: .85em;
+			font-weight: bold;
+			// letter-spacing: .12em;
+			color: $black;
 		}
-	}
-	td {
-		//padding: 1.5em;
-	}
-	.event-excerpt {
-		font-size: .85em;
+		.event-title {
+			display: block;
+			margin: 0; padding: 0;
+			@extend .cf;
+			float: left;
+			width: 60%;
+			font-weight: bold;
+		}
+		.event-cover {
+			display: block;
+			margin: 0; padding: 0;
+			@extend .cf;
+			width: 20%;
+			float: left;
+			// font-family: $alt-font;
+			// text-transform: uppercase;
+			font-size: .85em;
+			font-weight: bold;
+		}
 	}
 }
 
@@ -1098,4 +1159,10 @@ FOOTER STYLES
 	h2 {
 		margin: 0; padding: 0;
 	}
+}
+
+.fdm-section-header h3 {
+	text-align: center;
+	color: $site-gold;
+	
 }
