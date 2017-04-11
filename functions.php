@@ -7,7 +7,7 @@ This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
 sidebars, comments, etc.
 */
-
+date_default_timezone_set('America/Chicago');
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'assets/bones.php' );
 
@@ -264,7 +264,7 @@ function replace_featured_image_box() {
 // }
 
 function sundown_store_hours() {
-
+  date_default_timezone_set('America/Chicago');
   $hours = array(
     'mon' => array('11:00-2:00'),
     'tue' => array('11:00-2:00'),

@@ -36,6 +36,7 @@ get_header(); ?>
 							<div class="row">
 								<div class="event-wrapper">
 									<?php $date = new DateTime(get_field('event_date'));
+												date_default_timezone_set("America/Chicago");
 												$day = $date->format('d');
 												$full_date = $date->format('D n/j');
 												$norm_date = $date->format('m/d/Y');
