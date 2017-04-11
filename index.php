@@ -43,7 +43,7 @@ get_header(); ?>
 												$month = $date->format('F');
 												$time = $date->format('h:iA'); ?>
 									<div class="event-content">
-										<span class="event-date"><?php echo $print_date; //the_field('event_date'); ?></span>
+										<span class="event-date"><?php echo $norm_date; //the_field('event_date'); ?></span>
 										<span class="event-title"><?php the_title(); ?></span>
 										<span class="event-cover"><?php //the_field('event_cover'); ?><a href="<?php the_permalink(); ?>">More Info</a></span>
 									</div>
