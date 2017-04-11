@@ -314,7 +314,7 @@ HEADER STYLES
 	.food-page-header {
 		height: 350px;
 		width: 100vw;
-		background: url(../images/kitchen1.jpeg) top center no-repeat;
+		background: url(../images/kitchen1.jpeg) bottom center no-repeat;
 		background-size: cover;
 		opacity: 0.6;
 	}
@@ -1160,9 +1160,19 @@ FOOTER STYLES
 		margin: 0; padding: 0;
 	}
 }
+.single-title {
+	text-align: center;
+	padding-bottom: .45em;
+	border-bottom: 1px solid $site-silver;
+}
+.single-date {
+	text-align: center;
+	color: $site-gold;
+	letter-spacing: .12em;
+}
 
 .fdm-section-header h3 {
 	text-align: center;
 	color: $site-gold;
-	
+
 }

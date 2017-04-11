@@ -39,10 +39,11 @@ get_header(); ?>
 												$day = $date->format('d');
 												$full_date = $date->format('D n/j');
 												$norm_date = $date->format('m/d/Y');
+												$print_date = $date->format('l, F jS, Y');
 												$month = $date->format('F');
 												$time = $date->format('h:iA'); ?>
 									<div class="event-content">
-										<span class="event-date"><?php echo $norm_date; //the_field('event_date'); ?></span>
+										<span class="event-date"><?php echo $print_date; //the_field('event_date'); ?></span>
 										<span class="event-title"><?php the_title(); ?></span>
 										<span class="event-cover"><?php //the_field('event_cover'); ?><a href="<?php the_permalink(); ?>">More Info</a></span>
 									</div>

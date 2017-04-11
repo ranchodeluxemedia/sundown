@@ -760,7 +760,7 @@ text-align:center
 }#about-section p{margin:1em
 }.food-page-header{height:350px;
 width:100vw;
-background:url(../images/kitchen1.jpeg) top center no-repeat;
+background:url(../images/kitchen1.jpeg) bottom center no-repeat;
 background-size:cover;
 opacity:.6
 }.events-page-header{height:350px;
@@ -1010,6 +1010,12 @@ background-size:cover;
 color:#fff
 }.event-page-header h2{margin:0;
 padding:0
+}.single-title{text-align:center;
+padding-bottom:.45em;
+border-bottom:1px solid #858585
+}.single-date{text-align:center;
+color:#cd9a6d;
+letter-spacing:.12em
 }.fdm-section-header h3{text-align:center;
 color:#cd9a6d
 }@media only screen and (min-width:481px){.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;

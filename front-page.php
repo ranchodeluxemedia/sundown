@@ -40,7 +40,7 @@
 						<h3>Our Story</h3>
 						<p>Located in the heart of downtown Ruston, Louisiana, Sundown Tavern has been a staple of the community for over 40 years. </p>
 						<hr>
-						<a href="#" class="featured-link">Read Our Story</a>
+						<a href="/our-story" class="featured-link">Read Our Story</a>
 					</div>
 				</div>
 
